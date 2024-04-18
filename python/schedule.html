@@ -1,0 +1,87 @@
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <div id="policy" class="portlet light">
+      <div class="portlet-title">
+        <div class="caption">
+          <i class="fa fa-list"></i>
+          <span class="caption-subject bold uppercase">Subjects Enrolled</span>
+          <span class="caption-helper hidden-xs"
+            >use this module to view your subject...</span
+          >
+        </div>
+        <div class="actions">
+          <a
+            id="pstudent-actual-load"
+            style="display: none"
+            target="_blank"
+            class="btn btn-green btn-sm"
+            >Print Student Actual Load <i class="fa fa-print"></i
+          ></a>
+          <a
+            id="pcor"
+            style="display: none"
+            target="_blank"
+            class="btn btn-green btn-sm"
+            >Print Certificate Of Registration <i class="fa fa-print"></i
+          ></a>
+          <div class="portlet-input input-inline input-medium">
+            <select
+              class="form-control input-sm menu-select"
+              name="term"
+              id="acad-year-term"
+            >
+              <option
+                value="OHJyWjJ4Z1FZUWNLcERiZTVNZFRtQT09"
+                data-term="MW5nUlFsVzNkSURDMDUvbDhEQjdUUT09"
+                data-reg="409155"
+                data-code="2nd Sem 2023-2024 FIRST YEAR EXCEPT BSTCM"
+                data-rdate=""
+                data-odate="2024-01-31 17:17:58"
+              >
+                2023-2024 2nd Semester
+              </option>
+              <option
+                value="dWhJVDBQN0J2MUZqaUlIbGdUZUllZz09"
+                data-term="eTRtMUs3Sks3WE9hSG0wTCtmK0Rjdz09"
+                data-reg="398310"
+                data-code="1st Sem 2023-2024 FIRST YEAR EXCEPT BSTCM"
+                data-rdate=""
+                data-odate="2023-09-09 12:28:31"
+              >
+                2023-2024 1st Semester
+              </option>
+            </select>
+          </div>
+          <a
+            class="btn btn-default btn-sm"
+            data-menu="refresh"
+            href="javascript:;"
+            ><i class="fa fa-refresh"></i
+          ></a>
+        </div>
+      </div>
+      <div class="portlet-body">
+        <div
+          id="subjects"
+          class="tabpane"
+          style="overflow: auto; display: none"
+        >
+          <div class="table-scrollable"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  if (window.Students.subjects == undefined) {
+    $.getScript(
+      "https://prisms.ustp.edu.ph/assets/system/scripts/Students/subjects.js?v=1.0.5",
+      function () {
+        console.log("loaded script and content");
+        window.Students.subjects.init();
+      }
+    );
+  } else {
+    window.Students.subjects.init();
+  }
+</script>

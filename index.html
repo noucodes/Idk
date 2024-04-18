@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1" name="viewport">
+<meta content="System Base design" name="description">
+<meta content="Allan Robert B. Sanchez" name="author">
+<!-- <meta content="Jeremiah James G. Samson" name="author"> -->
+<meta content="Jayson Lara Esporna" name="author">
+<meta content="Allen Salomon" name="author">
+<meta name="csrf-token" content="DzcOH1DFbojetL2WM9h1UBNyTgieA1IXz1FuunGP" />
+<meta name="school-name" content="University of Science and Technology of Southern Philippines" />
+<meta name="school-address" content="Alubijid | Cagayan de Oro | Claveria | Jasaan | Oroquieta | Panaon" />
+<title>Home</title>
+<!-- <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/> -->
+<link rel="icon" href="https://prisms.ustp.edu.ph/general/getThemePhoto?tid=1&amp;field=favicon" type="image/gif" sizes="16x16">
+<link href="https://prisms.ustp.edu.ph/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://prisms.ustp.edu.ph/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://prisms.ustp.edu.ph/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="https://prisms.ustp.edu.ph/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<link rel="stylesheet" type="text/css" href="https://prisms.ustp.edu.ph/assets/global/plugins/bootstrap-toastr/toastr.min.css"/>
+<link rel="stylesheet" type="text/css" href="https://prisms.ustp.edu.ph/assets/global/plugins/sweetalert/sweetalert2.min.css"/>
+
+
+
+<link href='https://prisms.ustp.edu.ph/assets/global/plugins/fullcalendar/fullcalendar.min.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/fullcalendar/lib/cupertino/jquery-ui.min.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/select2/select2.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/sweetalert/sweetalert2.min.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/smartnotification/smartnotification.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/fancybox/source/jquery.fancybox.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.carousel.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.theme.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.transitions.css' rel='stylesheet' type='text/css'/><link href='https://prisms.ustp.edu.ph/assets/global/plugins/bootstrap-touchspin/bootstrap.touchspin.css' rel='stylesheet' type='text/css'/>
+
+
+
+
+<link href="https://prisms.ustp.edu.ph/assets/global/css/components-rounded.min.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="https://prisms.ustp.edu.ph/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="https://prisms.ustp.edu.ph/assets/admin/layout/css/layout-jmc.css?v1.0.4" rel="stylesheet" type="text/css"/>
+<link href="https://prisms.ustp.edu.ph/assets/admin/layout/css/themes/darkblue.css?v1.0.0" rel="stylesheet" type="text/css" id="style_color"/>
+<link href="https://prisms.ustp.edu.ph/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+<link href="https://prisms.ustp.edu.ph/assets/system/css/custom.css?v=1.0.4" rel="stylesheet" type="text/css">
+
+
+
+<style>
+	.login-content a{
+		color: #d1be0e !important;
+	}
+
+	.institution-title{
+	  /* text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px; */
+	  color: #fbfbfb !important;
+	  margin-top: 0px !important;
+	  text-transform: uppercase;
+	  margin-left: 10px;
+	  font-weight: bold;
+	  font-family: serif;
+	}
+
+	.institution-title small{
+		color: #fbfbfb !important;
+		font-family: serif;
+	}
+
+	.institution-title:link { text-decoration: none; }
+	.institution-title:visited { text-decoration: none; }
+	.institution-title:hover { text-decoration: none; }
+	.institution-title:active { text-decoration: none; }
+
+	.page-header.navbar {
+		background-color: #060e57 !important;
+		height: 50px !important;
+	}
+
+	.modal-header-bg {
+		background-color: #060e57 !important;
+		color: #fff !important;
+	}
+</style>
+<link rel="shortcut icon" href="https://prisms.ustp.edu.ph/general/getThemePhoto?tid=1&amp;field=favicon" type="image/png" sizes="16x16">
+
+</head>
+<body class="page-header-fixed page-footer-fixed  page-quick-sidebar-over-content page-style-square ">
+
+<div class="page-header navbar navbar-fixed-top">
+	<div class="page-header-inner">
+
+	<div class="page-logo" style="top: 0px; width: fit-content;">
+		<a href="https://prisms.ustp.edu.ph" class="">
+		  		  <img height="50" width="50" style="margin-top: 0px; " src="https://prisms.ustp.edu.ph/general/getThemePhoto?tid=1&amp;field=header_logo" alt="logo" class="logo-default"/>
+		  		</a>
+
+		<h3 class="autofit pull-left" style="margin-top: 10px !important;">
+            <a class="institution-title hidden-phone hidden-xs hidden-sm" href="https://prisms.ustp.edu.ph">
+							U<small>NIVERSITY</small> <small>OF</small> S<small>CIENCE</small> <small>AND</small> T<small>ECHNOLOGY</small> <small>OF</small> S<small>OUTHERN</small> P<small>HILIPPINES</small> 					    </a>
+
+			<a class="institution-title font-lg hidden-lg hidden-sm hidden-md hidden-xl" href="https://prisms.ustp.edu.ph">
+
+									U<small>NIVERSITY</small> <small>OF</small> S<small>CIENCE</small> <small>AND</small> T<small>ECHNOLOGY</small> <small>OF</small> S<small>OUTHERN</small> P<small>HILIPPINES</small> 				
+		    </a>
+
+        </h3>
+
+		<div class="menu-toggler sidebar-toggler hide">
+
+		</div>
+	</div>
+	<a href="javascript:void(0);" class="menu-toggler hidden-lg responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse">
+		<i class="fa fa-bars hidden-lg hidden-md hidden-sm"></i>
+	</a>
+	<div class="top-menu">
+		<ul class="nav navbar-nav pull-right">
+			<li class="dropdown dropdown-extended dropdown-notification hide" id="header_notification_bar">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+				<i class="icon-bell"></i>
+				<span class="badge badge-default" id="HeaderPendingNotificationTotal">
+				0 </span>
+				</a>
+				<ul class="dropdown-menu">
+					<li class="external">
+						<h3><span class="bold" id="PendingNotificationTotal">0 pending</span> notifications</h3>
+						<a href="javascript:void(0)">view all</a>
+					</li>
+					<li>
+						<ul class="dropdown-menu-list scroller" id="HeaderPendingNotification" style="height: 250px;" data-handle-color="#637283">
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown dropdown-extended dropdown-inbox hide" id="header_inbox_bar">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+				<i class="icon-envelope-open"></i>
+				<span class="badge badge-default" id="HeaderUnreadMessagesTotal">
+				0 </span>
+				</a>
+				<ul class="dropdown-menu">
+					<li class="external">
+						<h3>You have <span class="bold" id="UnreadMessagesTotal">0 New</span> Messages</h3>
+						<a href="javascript:void(0)">view all</a>
+					</li>
+					<li>
+						<ul class="dropdown-menu-list scroller" id="HeaderUnreadMessages" style="height: 275px;" data-handle-color="#637283">
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown dropdown-extended dropdown-tasks hide" id="header_task_bar">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+				<i class="icon-calendar"></i>
+				<span class="badge badge-default">
+				0 </span>
+				</a>
+				<ul class="dropdown-menu extended tasks">
+					<li class="external">
+						<h3>You have <span class="bold">0 pending</span> tasks</h3>
+						<a href="javascript:;">view all</a>
+					</li>
+					<li>
+						<ul class="dropdown-menu-list scroller" style="height: 275px;" data-handle-color="#637283">
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown dropdown-user">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
+				<img alt="" class="img-circle" src="https://prisms.ustp.edu.ph/general/getUserPhoto?UserID=VGFXMVFqWEN1Y1N6TXFIa2Nkdm56Zz09&amp;date=240402010420"/>
+				<span class="username uppercase username-hide-on-mobile">
+				Escudero, elton john murillo, </span>
+				<i class="fa fa-angle-down"></i>
+				</a>
+				<ul class="dropdown-menu dropdown-menu-default">
+					<li>
+												<a href="#student/profile/help" data-url="profile/student" class="menu-link"> <i class="fa fa-user"></i> <span class="title "> My Profile </span></a>
+											</li>
+					<li class="hide">
+						<a href="javascript:;"><i class="icon-calendar"></i> My Calendar </a>
+					</li>
+					<li class="hide">
+						<a href="javascript:;"><i class="icon-envelope-open"></i> My Inbox <span class="badge"> 0 </span></a>
+					</li>
+
+					
+					
+					
+					<li class="divider"></li>
+					<li class="hide">
+						<a href="extra_lock.html"><i class="icon-lock"></i> Lock Screen </a>
+					</li>
+					<li>
+						<a href="https://prisms.ustp.edu.ph/logout"><i class="icon-key"></i> Log Out </a>
+					</li>
+				</ul>
+			</li>
+			<li class="dropdown dropdown-quick-sidebar-toggler hide">
+				<a href="javascript:;" class="dropdown-toggle"><i class="icon-logout"></i> </a>
+			</li>
+		</ul>
+	</div>
+</div></div>
+
+<div class="clearfix"></div>
+
+<div class="page-container">
+
+           <div class="page-sidebar-wrapper">
+	<div class="page-sidebar navbar-collapse collapse">
+		<!-- BEGIN SIDEBAR MENU -->
+		<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+		<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+		<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+		<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+		<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+		<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+		<ul class="page-sidebar-menu " data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
+			<!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+			<li class="sidebar-toggler-wrapper">
+				<!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+				<div class="sidebar-toggler">
+				</div>
+				<!-- END SIDEBAR TOGGLER BUTTON -->
+			</li>
+			<!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+			<li class="sidebar-search-wrapper">
+				<!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+				<!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+				<!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
+				<form class="sidebar-search hide" action="?" method="POST">
+					<a href="javascript:;" class="remove">
+					<i class="icon-close"></i>
+					</a>
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search...">
+						<span class="input-group-btn">
+						<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+						</span>
+					</div>
+				</form>
+				<!-- END RESPONSIVE QUICK SEARCH FORM -->
+			</li>
+            <br />
+
+			<li class="start menu-item ">
+				<a href="#dashboard" data-url="student-dashboard" class="menu-link" > <i class="icon-home"></i> <span class="title label-dashboard">Dashboard</span> <span class="selected"></span></a>
+			</li>
+
+			
+            
+						             
+              <li class="">
+                <a href="javascript:;"><i class="fa fa-user"></i> <span class="title label-student">Student</span><span class="arrow "></span></a>
+                <ul class="sub-menu">
+					<li class="menu-item">
+						<a href="#students/subjects" data-url="students/subjects" class="menu-link"> <i class="fa fa-list"></i> <span class="title">Subjects Enrolled</span></a>
+					</li>
+                  	<li class="menu-item">
+						<a href="#student/grades" data-url="students/grades" class="menu-link"> <i class="fa fa-table"></i> <span class="title">Grades</span></a>
+					</li>
+									  				  <li class="menu-item">
+						<a href="#student/evaluation" data-url="students/evaluation" class="menu-link"> <i class="fa fa-table"></i> <span class="title">Evaluation</span></a>
+				  </li>
+
+				  <li class="menu-item">
+					<a href="#student/medical-student" data-url="students/medical-student" class="menu-link"> <i class="icon-heart"></i> <span class="title">Medical</span></a>
+				  </li>
+
+				  <li class="menu-item">
+						<a href="#student/counseling-student" data-url="students/counseling-student" class="menu-link"> <i class="icon-info"></i> <span class="title">Counseling</span></a>
+				  </li>
+					
+					<li class="menu-item">
+						<a href="#student/dtr" data-url="students/dtr" class="menu-link"> <i class="icon-calendar"></i> <span class="title">DTR</span></a>
+					</li>
+					<li class="menu-item">
+						<a href="#student/attendance" data-url="students/attendance" class="menu-link"> <i class="fa fa-book"></i> <span class="title">Attendance & Discipline</span></a>
+				  </li>
+				                  </ul>
+			  </li>
+			  					<li class="">
+						<a href="javascript:;"><i class="fa fa-user"></i> <span class="title">Requests</span><span class="arrow "></span></a>
+					 	<ul class="sub-menu">
+																						<li class="menu-item">
+									<a href="#student/leave" data-url="students/leave" class="menu-link"> <i class="icon-calendar"></i> <span class="title">Term Leave</span></a>
+								</li>
+																																											<li class="menu-item">
+									<a href="#student/scholarship-request" data-url="students/scholarship-request" class="menu-link"> <i class="fa fa-graduation-cap"></i> <span class="title">Scholarship</span></a>
+								</li>
+												 	</ul>
+					</li>
+				 													<li class="menu-item">
+						<a href="#student/qr-code" data-url="qr-code" class="menu-link"> <i class="fa fa-qrcode"></i> <span class="title">QR Code</span></a>
+					</li>
+				
+				            
+			
+			
+			<li class="menu-item">
+				<a href="#proof-of-payment" data-url="proof-of-payment" class="menu-link"> <i class="fa fa-credit-card"></i> <span class="badge badge-info"></span> <span class="title label-proof-of-payment"> Proof of Payment </span> <span class="selected"></span></a>
+			</li>
+
+			
+			
+						<li class="menu-item">
+				<a href="#students/enrollment" data-url="students/enrollment" class="menu-link"> <i class="fa fa-child"></i> <span class="title label-enrollment"> Enrollment </span><span class="selected"></span></a>
+			</li>
+			
+			
+			
+
+        
+            
+      	            
+
+			<li class="menu-item">
+				<a href="#student/profile/help" data-url="profile/student" class="menu-link"> <i class="fa fa-question-circle"></i> <span class="title "> Help </span><span class="selected"></span></a>
+			</li>
+
+		</ul>
+		<!-- END SIDEBAR MENU -->
+	</div>
+</div>	
+
+	<div class="page-content-wrapper">
+		<div class="page-content">
+
+			<h3 class="page-title hide">
+Home <small>Welcome To Dashboard!</small>
+</h3>
+<div class="page-bar">
+		<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="https://prisms.ustp.edu.ph">Home</a>
+		</li>
+
+                            <li> <i class="fa fa-angle-right"></i><a href="https://prisms.ustp.edu.ph">Dashboard</a></li>
+            
+	</ul>
+	</div>			<div class="main-content">
+			<input type="hidden" id="m_role" value="students" />
+
+			<style>
+.tile {
+  border-radius: 25px !important;
+  width: 135px !important;
+  margin-right: 5px !important;
+}
+
+</style>
+<div class="row">
+    <div class="col-md-8">
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3 class="panel-title bold" style="padding-top: 10px; padding-bottom: 10px;">
+                    Welcome back, <b class="" style="color: black;">Elton John</b></span><br/>
+                </h3>
+            </div>
+        </div>
+        <div class="tiles ">
+    <div class="tile double-down bg-blue-hoki">
+        <div class="tile-body">
+            <i class="fa fa-bell-o"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Notifications </div>
+            <div class="number"> 0 </div>
+        </div>
+    </div>
+
+    <div class="tile bg-red-thunderbird bg-font-red-thunderbird" data-url="students/enrollment" >
+        <div class="tile-body">
+            <i class="fa fa-child"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Enrollment </div>
+            <div class="number">  </div>
+        </div>
+    </div>
+
+    <div class="tile bg-green" data-url="students/grades">
+        <div class="tile-body">
+            <i class="fa fa-star"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Grades </div>
+            <div class="number"> </div>
+        </div>
+    </div>
+
+    <div class="tile bg-purple" data-url="students/billing" >
+        <div class="tile-body">
+            <i class="fa fa-th-list"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Assessment </div>
+            <div class="number"> </div>
+        </div>
+    </div>
+
+    <div class="tile  bg-green-meadow" data-url="students/accountabilities">
+        <div class="tile-body">
+            <i class="fa fa-list"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Accountabilities </div>
+            <div class="number">0</div>
+        </div>
+    </div>
+
+    <div class="tile bg-yellow-saffron" data-url="students/counseling-student">
+        <div class="corner"> </div>
+        <div class="tile-body">
+            <i class="fa fa-user"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Counseling </div>
+            <div class="number"></div>
+        </div>
+    </div>
+
+        <div class="tile double bg-blue-steel" data-url="students/report-card">
+        <div class="tile-body">
+            <i class="fa fa-check-square-o"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Request for Report Card </div>
+            <div class="number"> </div>
+        </div>
+    </div>
+    
+    <div class="tile bg-red-sunglo" data-url="calendar/announcement/students">
+        <div class="tile-body">
+            <i class="fa fa-bullhorn"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Announcement </div>
+                    </div>
+    </div>
+
+        <div class="tile bg-yellow-gold bg-font-yellow-gold" data-url="students/leave">
+        <div class="tile-body"><i class="fa fa-sign-out"></i></div>
+        <div class="tile-object"><div class="name"> Leave Request </div></div>
+    </div>
+    
+        <div class="tile bg-green-turquoise bg-font-green-turquoise" data-url="students/document-promissory">
+        <div class="tile-body"><i class="fa fa-file-word-o"></i></div>
+        <div class="tile-object"><div class="name">  Document Promissory </div></div>
+    </div>
+    
+        <div class="tile  bg-blue-hoki" data-url="students/balance-promissory">
+        <div class="tile-body"><i class="fa fa-money"></i></div>
+        <div class="tile-object"><div class="name"> Balance Promissory </div></div>
+    </div>
+    
+    <div class="tile  bg-green" data-url="students/attendance">
+        <div class="tile-body"><i class="fa fa-bar-chart-o"></i></div>
+        <div class="tile-object"><div class="name"> Attendance & Discipline </div></div>
+    </div>
+
+    <div class="tile bg-purple-studio bg-font-purple-studio " data-url="students/medical">
+        <div class="tile-body">
+            <i class="fa fa-medkit"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Medical Records</div>
+        </div>
+    </div>
+
+        <div class="tile bg-red-sunglo" data-url="students/scholarship-request" >
+        <div class="tile-body">
+            <i class="fa fa-graduation-cap"></i>
+        </div>
+        <div class="tile-object">
+            <div class="name"> Scholarship Request </div>
+        </div>
+    </div>
+
+    
+                                <div class="tile bg-green" onclick="window.open('https://prisms.ustp.edu.ph/enrollment/print_report?event=sal&amp;term=MW5nUlFsVzNkSURDMDUvbDhEQjdUUT09&amp;regid=OHJyWjJ4Z1FZUWNLcERiZTVNZFRtQT09&amp;campus=WjlBbzRFTnhBZGkxdG50VmxUTVRjdz09&amp;studno=2023308388')">
+                <div class="tile-body">
+                    <i class="fa fa-file-text-o"></i>
+                </div>
+                <div class="tile-object">
+                    <div class="name">COR</div>
+                </div>
+            </div>
+            
+            <div class="tile bg-blue-hoki" data-url="students/qr-code" >
+            <div class="tile-body">
+                <i class="fa fa-qrcode"></i>
+            </div>
+            <div class="tile-object">
+                <div class="name">QR Code</div>
+
+            </div>
+        </div>
+    
+    
+</div>
+    </div>
+    <div class="col-md-4">
+                <div class="panel panel-warning">
+            <div class="panel-heading">
+                <h3 class="panel-title "  style=" color:black; padding-top: 10px; padding-bottom: 10px;">
+                    Outstanding Balance : <b class="">PHP 22,725.00</b></span><br/>
+                </h3>
+            </div>
+        </div>
+        
+        <div id="appointmentcalendar" class=" well well-light well-sm">
+
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title ">
+                    Notice Board
+                </h3>
+            </div>
+            <div class="panel-body">
+            <ul class="feeds">
+                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal view -->
+<div id="modal_event" class="modal fade bs-modal-lg" tabindex="-1" role="dialog" aria-hidden="false">
+    <div class="modal-backdrop fade in"></div>
+	<div class="modal-dialog modal-md">
+		<div class="modal-content">
+			<div class="modal-header">
+			<span class="pull-right">
+			<button type="button" class="btn btn-sm green btn-reserve hidden"><i class="fa fa-list"></i> Schedule</button>
+			<button type="button" class="btn btn-sm btn-danger hidden"><i class="fa fa-trash-o"></i> Delete</button>
+			<button type="button" class="btn btn-sm btn-warning hidden"><i class="fa fa-save"></i> Save</button>
+			<button type="button" class="btn btn-sm btn-default btn-cancel" data-dismiss="modal" aria-hidden="true">Close</button>
+			</span>
+			<h4 class="modal-title"><strong class="action">Event</strong> &nbsp;&nbsp; <small class="creator"></small></h4>
+			</div>
+			<div class="modal-body" style="overflow-y:auto;overflow-x:hidden;max-height:480px;">
+				<div class="portlet-body form">
+				 <form class="form-horizontal" autocomplete="off" id="eventform" role="form" onsubmit="return false;">
+                   <div class="form-body">
+				    <div class="form-group hidden">
+
+					</div>
+					<input type="hidden" id="xid" name="xid" value="new"/>
+
+					<div class="form-group">
+				        <label class="col-sm-3 col-md-2 control-label">Title:</label>
+				        <div class="col-sm-9 col-md-10"><input type="text" class="form-control" id="title" name="title" disabled/></div>
+				    </div>
+					<div class="form-group">
+				        <label class="col-sm-3 col-md-2 control-label">Description:</label>
+				        <div class="col-sm-9 col-md-10"><input type="text" class="form-control" id="desc" name="desc" disabled/></div>
+				    </div>
+
+					<div class="form-group">
+				        <label class="col-sm-3 col-md-2 control-label">Start:</label>
+				        <div class="col-sm-5 col-md-6"><input type="text" class="form-control datepicker" id="startd" name="startd" disabled/></div>
+				        <div class="col-sm-4 col-md-4 dvperiod"><input type="text" class="form-control timepicker" id="startt" name="startt" disabled/></div>
+				    </div>
+					<div class="form-group dvperiod ">
+				        <label class="col-sm-3 col-md-2 control-label">End:</label>
+				        <div class="col-sm-5 col-md-6"><input type="text" class="form-control datepicker" id="endd" name="endd" disabled/></div>
+				        <div class="col-sm-4 col-md-4"><input type="text" class="form-control timepicker" id="endt" name="endt" disabled/></div>
+					</div>
+
+				   </div>
+				 </form>
+				</div>
+			</div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var initCalendar= function(){
+        $('#appointmentcalendar').fullCalendar({
+                defaultDate: '2024-04-02 01:01:20',
+                fixedWeekCount: false,
+                selectable: true,
+                selectHelper: true,
+                theme: true,
+                select: function(start, end) {
+
+                },
+                dayClick: function(date, allDay, jsEvent, view) {
+                    if(!date.isBefore(moment())){
+                        $(".fc-day").removeClass("day-select");
+                        $(this).addClass("day-select");
+                    }
+                },
+				events: function(start, end, timezone, callback) {
+                    $.ajax({
+					  url: base_url + 'general/events',
+					  dataType: 'json',
+					  data: {
+						// our hypothetical feed requires UNIX timestamps
+                        eventss : 'default',
+						start: start.unix(),
+						end:  end.unix()
+					  },
+					  success: function(doc) {
+						var events = [];
+						let i = 0;
+						for (i =0; i <= doc.length; ++i ){
+							if(doc[i]){
+								events.push({
+									id : doc[i]['id'],
+									title: doc[i]['title'],
+									start: doc[i]['start'], // will be parsed
+									time: 'test',
+									rendering: 'background',
+									color: doc[i]['color'],
+									overlap: false,
+								});
+							}
+						}
+						callback(events);
+					  }
+					});
+				},
+                eventClick: function(doc) {
+
+                    $.ajax({
+					  url:  base_url + 'general/events',
+					  dataType: 'json',
+					  data: {
+						// our hypothetical feed requires UNIX timestamps
+                        eventss : 'selected',
+						id: doc.id,
+					  },
+					  success: function(res) {
+
+                            var start = res.StartDate.split('-');
+                            var end = res.EndDate.split('-');
+                            $("#title").val(res.Title);
+                            $("#desc").val(res.Description);
+                            $("#startd").val(start[1]+"/"+start[2]+"/"+start[0]);
+
+                            $("#startt").val(res.StartTime);
+                            $(".dvperiod").hide();
+
+                            if(res.TypeID != 0){
+                                $("#endd").val(end[1]+"/"+end[2]+"/"+end[0]);
+                                $("#endt").val(res.EndTime);
+                                $(".dvperiod").show();
+                            }
+
+					  }
+					});
+                    $("#modal_event").modal('show');
+                }
+
+			});
+
+    };
+
+    setTimeout(() => {
+        initCalendar();
+        
+    }, 1000);
+
+</script>	
+			</div>
+
+		</div>
+	</div>
+
+	
+</div>
+<div class="page-footer">
+	<div class="page-footer-inner">
+		2024 &copy; Prince Technologies Corporation. ver. 1.62.19
+	</div>
+	<div class="pull-right" >
+	<span style="color:white;"><i class="icon-calendar"></i> <span
+			class="thin uppercase visible-lg-inline-block">April 02, 2024 01:01 AM</span></span>
+		
+			<span style="margin-left: 5px;"> <span style="color:white;" class="visible-lg-inline-block"> Choose Language: </span><select class="language-selector" data-width="fit" >
+				<option value="en" data-content='<span class="flag-icon flag-icon-us"></span> English'><span
+						class="flag-icon flag-icon-us"></span>English</option>
+				<option value="chi" data-content='<span class="flag-icon flag-icon-mx"></span> Chinese'>中文</option>
+			</select>
+			</span>
+			
+	</div>
+	<div class="scroll-to-top">
+		<i class="icon-arrow-up"></i>
+	</div>
+</div>
+<!-- MODAL -->
+<div class="modal fade" id="student-search-modal" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header modal-header-bg">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Search Student(s)</h4>
+			</div>
+			<div class="modal-body">
+				<div id="searchfilter"  class="actions">
+					<div id="searchDIV" class="portlet-input input-inline input-medium hide">
+						<div class="input-icon right">
+							<i class="icon-magnifier"></i>
+							<input type="text" placeholder="search..." id="find-search-text" name="find-search-text" class="form-control input-circle filter-table" data-table="tblfaculty">
+						</div>
+					</div>
+									</div>
+				<div class="portlet-body" id="TableWrapper">
+					<table class="table table-striped table-bordered table-hover  table-condensed table_scroll dataTable" id="student-search-table" style="cursor: pointer;">
+						<thead>
+							<tr>		
+								<th class="text-center">Pic</th>
+								<th class="text-center">ID No.</th>
+								<th class="text-center">Full Name</th>
+								<th class="text-center">Department</th>
+								<th class="text-center">Academic Programs</th>
+								<th class="text-center">Year Level</th>
+								<th class="text-center">Gender</th>
+								<th class="text-center">Status</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+						</table>
+					</div>
+				
+
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn default" data-dismiss="modal">Close</button>
+							</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- MODAL -->
+
+<!-- MODAL -->
+<div class="modal fade" id="modal_large" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header modal-header-bg">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Modal Title</h4>
+			</div>
+			<div class="modal-body">
+				 Modal body goes here
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn blue btn_modal"><i class="fa fa-save"></i> Save</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- MODAL -->
+<div class="modal fade" id="modal_large_2" data-backdrop="static" data-keyboard="false" role="dialog" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header modal-header-bg">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Modal Title</h4>
+			</div>
+			<div class="modal-body">
+				 Modal body goes here
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn blue btn_modal">Save changes</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div class="modal fade" id="modal_basic" data-backdrop="static" data-keyboard="false" role="basic" aria-hidden="true">
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header modal-header-bg">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Modal Title</h4>
+			</div>
+			<div class="modal-body">
+				 Modal body goes here
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn blue btn_modal">Save</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div class="modal fade" id="modal_basic2" data-backdrop="static" data-keyboard="false" role="basic" aria-hidden="true">
+	<div class="modal-dialog ">
+		<div class="modal-content">
+			<div class="modal-header modal-header-bg">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+				<h4 class="modal-title">Modal Title</h4>
+			</div>
+			<div class="modal-body">
+				 Modal body goes here
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn blue btn_modal">Save</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<!-- MODAL -->
+<div class="modal fade" id="progress_modal" data-backdrop="static" data-keyboard="false" role="basic" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-body center">
+				<img src="https://prisms.ustp.edu.ph/assets/system/media/images/loading-spinner-grey.gif">
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+<div id="modal_handler">
+    <div class="modal fade in ##CLASS## ##MODAL_TYPE##" id="##MODAL_NAME##" role="dialog" aria-hidden="true">
+        <div class="page-loading page-loading-boxed">
+            <img src="https://prisms.ustp.edu.ph/assets/global/img/loading-spinner-grey.gif" alt="" class="loading">
+            <span>
+                &nbsp;&nbsp;Loading...
+            </span>
+        </div>
+        <div class="modal-dialog ##MODAL_DIV_TYPE##">
+            <div class="modal-content">
+                <div class="modal-body">
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal_container">
+</div>
+<!-- END MODAL -->
+
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui-1.10.3.custom.min.js') }} before bootstrap.min.js') }} to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/jquery-ui/jquery-ui-1.10.3.custom.min.js" type="text/javascript"></script>
+
+
+
+<script>
+var base_url, page_url, form, user_group;
+var App = {};
+window.Guardian={};
+window.Unifast={};
+
+jQuery(document).ready(function() {
+  	base_url = "https://prisms.ustp.edu.ph/";
+  	page_url = "home/";
+  	form = "";
+  	user_group = "students";
+  	is_parent = "";
+});
+</script>
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/respond.min.js"></script>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/excanvas.min.js"></script>
+<![endif]-->
+<script src="https://prisms.ustp.edu.ph/assets/system/scripts/locale-en.js" type="text/javascript"></script>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/bootstrap-toastr/toastr.min.js"></script>
+<script src="https://prisms.ustp.edu.ph/assets/global/plugins/sweetalert/sweetalert2.min.js"></script>
+
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/select2/select2.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/bootbox/bootbox.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/jquery.blockui.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/datatables/media/js/jquery.dataTables.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/datatables/plugins/bootstrap/dataTables.bootstrap.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/moment.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/fullcalendar/fullcalendar.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/amcharts/amcharts/amcharts.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/amcharts/amcharts/serial.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/bootstrap-wizard/jquery.bootstrap.wizard.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/jquery.pulsate.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/sweetalert/sweetalert2.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/jquery-validation/js/jquery.validate.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/smartnotification/smartnotification.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/fuelux/js/spinner.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/bootstrap-touchspin/bootstrap.touchspin.min.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/fancybox/source/jquery.fancybox.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/global/plugins/carousel-owl-carousel/owl-carousel/owl.carousel.js'></script><!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="https://prisms.ustp.edu.ph/assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="https://prisms.ustp.edu.ph/assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+
+<script src="https://prisms.ustp.edu.ph/assets/admin/pages/scripts/index.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<!-- BEGIN SYSTEM SCRIPTS -->
+<script src="https://prisms.ustp.edu.ph/assets/system/scripts/general.js?v=1.12"></script>
+<script src="https://prisms.ustp.edu.ph/assets/system/scripts/common.js?v=1.1.6"></script>
+<script src="https://prisms.ustp.edu.ph/assets/system/scripts/fn_jquery.js?v1.0.3"></script>
+<script src="https://prisms.ustp.edu.ph/assets/system/scripts/jquery_helper.js?v1.1.14"></script>
+<script src="https://prisms.ustp.edu.ph/assets/system/scripts/autoload.js?v1.1.0"></script>
+<script src="https://prisms.ustp.edu.ph/assets/system/scripts/notification.js?v1.1.0"></script>
+<script src="https://prisms.ustp.edu.ph/assets/system/scripts/pleaseWait.js?v1.1.0"></script>
+<script src="https://prisms.ustp.edu.ph/assets/system/scripts/select.js?v1.1.0"></script>
+
+<!-- END SYSTEM SCRIPTS -->
+<!-- BEGIN PAGE SCRIPTS -->
+<script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/system/scripts/Home/students.js?v=1.4'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/system/scripts/Students/fn-students.js?v1.0.3'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/system/scripts/select.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/system/scripts/datatable.js'></script><script type='text/javascript' src='https://prisms.ustp.edu.ph/assets/system/scripts/Enrollment/helper.js?v=1.1'></script><script>
+jQuery(document).ready(function() {
+	;});
+</script>
+<!-- END PAGE SCRIPTS -->
+
+
+<script>
+jQuery(document).ready(function() {
+   	Metronic.init(); // init metronic core componets
+   	Layout.init(); // init layout
+   	Index.init();
+});
+</script>
+
+</body>
+
+</html>
